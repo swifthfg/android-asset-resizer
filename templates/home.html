@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+  <p>Hi {{ user.username }}!</p>
+  <br>
+  <hr>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="sourcefile">
+    <button type="submit">Get Assets</button>
+  </form>
+  <hr>
+  <br>
+  <p><a href="{% url 'logout' %}">Sign Out</a></p>
+{% else %}
+  <p>But first, please sign in: <a href="{% url 'login' %}">Sign In</a> </p>
+  <p>Or...</p>
+  <p>Create new account: <a href="{% url 'signup' %}">Sign Up</a> </p>
+{% endif %}
+
+{% endblock %}
