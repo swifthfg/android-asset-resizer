@@ -1,7 +1,7 @@
 # android-asset-resizer
 Asset resizer for android applications. Powered by **Django**.
 
-Live on 'https://android-asset-resizer.herokuapp.com/'
+Live on <a href='https://android-asset-resizer.herokuapp.com/' target="_blank">https://android-asset-resizer.herokuapp.com/</a>
 
 To be able to use the system, sign up process is required. After creating account, one can simply upload the image file(xxxhdpi based) and get the prepared assets folder for each size.
 
