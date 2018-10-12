@@ -8,18 +8,22 @@
   <p>Hi {{ user.username }}!</p>
   <br>
   <hr>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="sourcefile">
-    <button type="submit">Get Assets</button>
-  </form>
+  <div class="auth-container">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="sourcefile">
+      <button type="submit">Get Assets</button>
+    </form>
+  </div>
   <hr>
   <br>
   <p><a href="{% url 'logout' %}">Sign Out</a></p>
 {% else %}
-  <p>But first, please sign in: <a href="{% url 'login' %}">Sign In</a> </p>
-  <p>Or...</p>
-  <p>Create new account: <a href="{% url 'signup' %}">Sign Up</a> </p>
+  <div class="nonauth-container">
+    <p>But first, please sign in: <a href="{% url 'login' %}">Sign In</a> </p>
+    <p>Or...</p>
+    <p>Create new account: <a href="{% url 'signup' %}">Sign Up</a> </p>
+  </div>
 {% endif %}
 
 {% endblock %}
