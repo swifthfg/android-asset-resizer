@@ -1,0 +1,11 @@
+.nonauth-container {
+	background-color: #eee;
+	padding: 15px;
+	border-radius: 20px; 
+}
+
+.auth-container {
+	background-color: #48991d;
+	padding: 10px;
+	border-radius: 20px; 
+}
